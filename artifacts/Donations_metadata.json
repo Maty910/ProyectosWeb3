@@ -1,0 +1,213 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_beneficiario",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "chamador",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "beneficiario",
+						"type": "address"
+					}
+				],
+				"name": "Donations_SacadorNaoPermitido",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "erro",
+						"type": "bytes"
+					}
+				],
+				"name": "Donations_TrasacaoFalhou",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "doador",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "valor",
+						"type": "uint256"
+					}
+				],
+				"name": "Donations_DoacaoRecebida",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "recebedor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "valor",
+						"type": "uint256"
+					}
+				],
+				"name": "Donations_SaqueRealizado",
+				"type": "event"
+			},
+			{
+				"stateMutability": "nonpayable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "doe",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "usuario",
+						"type": "address"
+					}
+				],
+				"name": "s_doacoes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "valor",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_valor",
+						"type": "uint256"
+					}
+				],
+				"name": "saque",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "i3arba - 77 Innovation Labs",
+			"custom:security": "No usar en producción.",
+			"kind": "dev",
+			"methods": {
+				"doe()": {
+					"details": "esta función debe sumar el valor donado por cada dirección a lo largo del tiempoesta función debe emitir un evento informando la donación."
+				},
+				"saque(uint256)": {
+					"details": "solo el beneficiario puede retirar",
+					"params": {
+						"_valor": "El valor de la nota fiscal"
+					}
+				}
+			},
+			"title": "Contrato Donations",
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"Donations_SacadorNaoPermitido(address,address)": [
+					{
+						"notice": "error emitido cuando una dirección diferente al beneficiario intenta retirar"
+					}
+				],
+				"Donations_TrasacaoFalhou(bytes)": [
+					{
+						"notice": "error emitido cuando falla una transacción"
+					}
+				]
+			},
+			"events": {
+				"Donations_DoacaoRecebida(address,uint256)": {
+					"notice": "evento emitido cuando se realiza una nueva donación"
+				},
+				"Donations_SaqueRealizado(address,uint256)": {
+					"notice": "evento emitido cuando se realiza un retiro"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"doe()": {
+					"notice": "función para recibir donaciones"
+				},
+				"s_doacoes(address)": {
+					"notice": "mapping para almacenar el valor donado por usuario"
+				},
+				"saque(uint256)": {
+					"notice": "función para retirar el valor de las donacionesel valor del retiro debe ser el valor de la nota enviada"
+				}
+			},
+			"notice": "Este es un contrato con fines educativos.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Proyecto III/contracts/donations.sol": "Donations"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Proyecto III/contracts/donations.sol": {
+			"keccak256": "0xaf3b90a370257f9b0fec5d13cb0a2abf8320c4e1dcfa9f0487d541fb10df4522",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d8d3c4457f78f4c73d2b7636f9bb15702f951a99cd9094141d2643bd9f525cd1",
+				"dweb:/ipfs/QmZ3htC3C5MS46Jb6oj6YcbKkBmnLcDrPCYGibWvN4F8ZF"
+			]
+		}
+	},
+	"version": 1
+}
