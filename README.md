@@ -69,7 +69,7 @@ Abrir el contrato en [Remix IDE](https://remix.ethereum.org/):
 
 ## Contrato desplegado
 
-- Dirección del contrato: *[a completar después del deploy]*  
+- Dirección del contrato: *0x6edd2c66811e2994375230caefce6ec96dc62ad8*  
 - Enlace al Block Explorer (Etherscan Sepolia): *[a completar]*  
 
 ## Temas abordados
