@@ -18,7 +18,7 @@ El proyecto incluye un contrato inteligente simple escrito en **Solidity**, el c
 
 ## Contrato desplegado
 
-- Dirección del contrato: *[reemplazar aquí con la dirección del contrato una vez desplegado]*
+- Dirección del contrato: `0x6961c0bfbad6e8f54c6a2a0377c4f4b6306445a0`
 - Transaction Hash del deploy: `0x59db85744b92a3f58a3d647b55d1354b045033b16a8298a10be03fd509acb548`
 
 ## Cómo interactuar con el contrato
@@ -69,8 +69,8 @@ Abrir el contrato en [Remix IDE](https://remix.ethereum.org/):
 
 ## Contrato desplegado
 
-- Dirección del contrato: *0x6edd2c66811e2994375230caefce6ec96dc62ad8*  
-- Enlace al Block Explorer (Etherscan Sepolia): *[a completar]*  
+- Dirección del contrato: `0x6edd2c66811e2994375230caefce6ec96dc62ad8`
+- Enlace al Block Explorer (Etherscan Sepolia): `*[a completar]*`  
 
 ## Temas abordados
 
