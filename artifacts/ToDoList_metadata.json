@@ -1,0 +1,199 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "descripcion",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tiempoDeCreacion",
+								"type": "uint256"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct ToDoList.Tarea",
+						"name": "tarea",
+						"type": "tuple"
+					}
+				],
+				"name": "ToDoList_TareaAnadida",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_descripcion",
+						"type": "string"
+					}
+				],
+				"name": "ToDoList_TareaCompletadaYEliminada",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_descripcion",
+						"type": "string"
+					}
+				],
+				"name": "eliminarTarea",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTarea",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "descripcion",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tiempoDeCreacion",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ToDoList.Tarea[]",
+						"name": "tarea_",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "s_tareas",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tiempoDeCreacion",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_descripcion",
+						"type": "string"
+					}
+				],
+				"name": "setTarea",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "i3arba - 77 Innovation Labs",
+			"kind": "dev",
+			"methods": {
+				"eliminarTarea(string)": {
+					"params": {
+						"_descripcion": "Descripción de la tarea que será eliminada"
+					}
+				},
+				"getTarea()": {
+					"returns": {
+						"tarea_": "Array de tareas"
+					}
+				},
+				"setTarea(string)": {
+					"params": {
+						"_descripcion": "La descripción de la tarea que se está añadiendo"
+					}
+				}
+			},
+			"title": "Contrato ToDoList",
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"ToDoList_TareaAnadida((string,uint256))": {
+					"notice": "Evento emitido cuando se añade una nueva tarea"
+				},
+				"ToDoList_TareaCompletadaYEliminada(string)": {
+					"notice": "Evento emitido cuando una tarea es completada y eliminada"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"eliminarTarea(string)": {
+					"notice": "Función para eliminar tareas completadas"
+				},
+				"getTarea()": {
+					"notice": "Función que retorna todas las tareas almacenadas en el array s_tareas"
+				},
+				"s_tareas(uint256)": {
+					"notice": "Array para almacenar la estructura de datos"
+				},
+				"setTarea(string)": {
+					"notice": "Función para añadir tareas al almacenamiento del contrato"
+				}
+			},
+			"notice": "Contrato para organizar tareas",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Proyecto II/contracts/toDoList.sol": "ToDoList"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Proyecto II/contracts/toDoList.sol": {
+			"keccak256": "0x008f80e1307b022ad3c71ab5df25e75de686d9d98fdf171c8002791b2938052b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ab214c8665b1a51645056c38886b47dbe50cb3f88783d399f00e3c6f81139256",
+				"dweb:/ipfs/QmdnGN3GFdLsAsVCV4AQi3WAiZZrn8yTcicDjdo8jUm9fL"
+			]
+		}
+	},
+	"version": 1
+}
