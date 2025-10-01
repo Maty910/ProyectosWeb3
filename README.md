@@ -2,6 +2,8 @@
 
 Este repositorio contiene un proyecto básico de **Web3** desarrollado y desplegado en la blockchain de **Sepolia Testnet**.
 
+## Proyecto I
+
 ## Descripción
 
 El proyecto incluye un contrato inteligente simple escrito en **Solidity**, el cual fue compilado y desplegado utilizando **Remix IDE** y gestionado mediante **Metamask**.
@@ -36,4 +38,51 @@ git clone https://github.com/Maty910/ProyectosWeb3.git
 - Mejorar la lógica del contrato inteligente
 - Agregar pruebas automáticas
 - Integrar con una aplicación frontend
+
+# Proyecto II - ToDoList
+
+Este contrato inteligente en Solidity implementa una lista de tareas (ToDo List) que permite a los usuarios organizar sus pendientes en la blockchain.  
+A través de este proyecto se ponen en práctica conceptos más avanzados de Solidity como **structs, arrays dinámicos, variables globales, funciones hash, eventos y estructuras de control**.
+
+## Características principales
+
+- Añadir nuevas tareas con descripción y marca de tiempo (`block.timestamp`).
+- Eliminar tareas completadas mediante comparación de strings con `keccak256` y `abi.encodePacked`.
+- Consultar todas las tareas almacenadas en el contrato.
+- Uso de eventos para notificar al cliente cuando se añade o elimina una tarea.
+
+## Clonar y usar el proyecto
+
+Clonar el repositorio:
+
+git clone https://github.com/Maty910/ProyectosWeb3.git
+
+Abrir el contrato en [Remix IDE](https://remix.ethereum.org/):
+
+1. Copiar el archivo `ToDoList.sol` en la carpeta `contracts/` de Remix.  
+2. Compilar con el compilador **Solidity 0.8.26**.  
+3. Desplegar el contrato usando la red **Sepolia Testnet** conectada a MetaMask.  
+4. Interactuar desde la pestaña **Deploy & Run Transactions**:
+   - `setTarea(string)` → Añadir tarea.
+   - `eliminarTarea(string)` → Eliminar tarea completada.
+   - `getTarea()` → Listar tareas almacenadas.
+
+## Contrato desplegado
+
+- Dirección del contrato: *[a completar después del deploy]*  
+- Enlace al Block Explorer (Etherscan Sepolia): *[a completar]*  
+
+## Temas abordados
+
+Este proyecto práctico abarca:
+
+- Structs  
+- Asignación de datos  
+- Tipos de datos: Valor y Referencia  
+- Arrays  
+- Variables globales  
+- Estructuras de control y flujo  
+- Operadores de incremento y comparación  
+- Función Hash y Función ABI  
+- Buenas prácticas de desarrollo  
 
