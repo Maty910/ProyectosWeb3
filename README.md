@@ -1,88 +1,67 @@
-# ProyectosWeb3
+# Smart Contracts – Curso Solidity
 
-Este repositorio contiene un proyecto básico de **Web3** desarrollado y desplegado en la blockchain de **Sepolia Testnet**.
+Este repositorio contiene distintos proyectos desarrollados como parte del aprendizaje en **Solidity** y **contratos inteligentes**.  
+Cada proyecto aborda un conjunto de conceptos fundamentales para la construcción de dApps en la blockchain de Ethereum.
 
-## Proyecto I
+---
 
-## Descripción
+## 📂 Contenido del repositorio
 
-El proyecto incluye un contrato inteligente simple escrito en **Solidity**, el cual fue compilado y desplegado utilizando **Remix IDE** y gestionado mediante **Metamask**.
+- **Proyecto I – SimpleStorage**  
+  Contrato inteligente básico que almacena y recupera un valor.  
+  Conceptos clave:  
+  - Tipos de datos simples (uint256, string, address)  
+  - Funciones getter/setter  
+  - Variables globales  
+  - Fundamentos de almacenamiento en la blockchain  
 
-## Tecnologías utilizadas
+- **Proyecto II – ToDoList**  
+  Contrato que implementa una lista de tareas.  
+  Conceptos clave:  
+  - Uso de `struct` y arrays dinámicos  
+  - Variables globales (`block.timestamp`)  
+  - Control de flujo (`for`, `if`)  
+  - Comparación de strings con `keccak256`  
+  - Eventos (`emit`)  
+  - Buenas prácticas en el diseño de contratos  
 
-- Solidity
-- Remix IDE
-- Metamask
-- Sepolia Testnet
-- Git & GitHub
+---
 
-## Contrato desplegado
+## 🚀 Deploys en Sepolia
 
-- Dirección del contrato: `0x6961c0bfbad6e8f54c6a2a0377c4f4b6306445a0`
-- Transaction Hash del deploy: `0x59db85744b92a3f58a3d647b55d1354b045033b16a8298a10be03fd509acb548`
+- **Proyecto I – SimpleStorage**  
+  - Dirección del contrato: `0x...`  
+  - Tx Hash: `0x...`
 
-## Cómo interactuar con el contrato
+- **Proyecto II – ToDoList**  
+  - Dirección del contrato: `0x5456861ef3d10d95255a25176b5c16f0443e068a2b87eb347d6ee686b7da6d96`  
+  - Tx Hash: `0x6eDD2C66811e2994375230caefCE6Ec96dc62aD8`
 
-- Ingresar a [Etherscan de Sepolia](https://sepolia.etherscan.io/)
-- Pegar la dirección del contrato en la barra de búsqueda
-- Desde la pestaña **Contract** se puede verificar, leer y escribir funciones según lo permita el contrato.
+---
 
-## Clonar el repositorio
+## 🛠️ Cómo probar los contratos
 
-Para clonar el repositorio en tu máquina local:
+1. Ir a [Remix IDE](https://remix.ethereum.org/)  
+2. Compilar el contrato (`.sol`) en la versión indicada  
+3. Usar la pestaña **Deploy & Run** con la red **Sepolia**  
+4. Conectar una wallet (MetaMask)  
+5. Interactuar con las funciones expuestas en la interfaz de Remix  
 
-git clone https://github.com/Maty910/ProyectosWeb3.git
+También es posible interactuar con los contratos ya desplegados desde **[Sepolia Etherscan](https://sepolia.etherscan.io/)**, pegando la dirección del contrato y utilizando las secciones **Read Contract** y **Write Contract**.
 
-## Próximos pasos
+---
 
-- Mejorar la lógica del contrato inteligente
-- Agregar pruebas automáticas
-- Integrar con una aplicación frontend
+## 📌 Próximos pasos
 
-# Proyecto II - ToDoList
+- Añadir **pruebas automatizadas** (Hardhat / Foundry)  
+- Mejorar la lógica de los contratos con nuevas funcionalidades  
+- Desplegar interfaces frontend (React / Next.js) para interactuar con los contratos  
+- Documentar patrones de diseño y seguridad en Solidity  
 
-Este contrato inteligente en Solidity implementa una lista de tareas (ToDo List) que permite a los usuarios organizar sus pendientes en la blockchain.  
-A través de este proyecto se ponen en práctica conceptos más avanzados de Solidity como **structs, arrays dinámicos, variables globales, funciones hash, eventos y estructuras de control**.
+---
 
-## Características principales
+## 👨‍💻 Autor
 
-- Añadir nuevas tareas con descripción y marca de tiempo (`block.timestamp`).
-- Eliminar tareas completadas mediante comparación de strings con `keccak256` y `abi.encodePacked`.
-- Consultar todas las tareas almacenadas en el contrato.
-- Uso de eventos para notificar al cliente cuando se añade o elimina una tarea.
-
-## Clonar y usar el proyecto
-
-Clonar el repositorio:
-
-git clone https://github.com/Maty910/ProyectosWeb3.git
-
-Abrir el contrato en [Remix IDE](https://remix.ethereum.org/):
-
-1. Copiar el archivo `ToDoList.sol` en la carpeta `contracts/` de Remix.  
-2. Compilar con el compilador **Solidity 0.8.26**.  
-3. Desplegar el contrato usando la red **Sepolia Testnet** conectada a MetaMask.  
-4. Interactuar desde la pestaña **Deploy & Run Transactions**:
-   - `setTarea(string)` → Añadir tarea.
-   - `eliminarTarea(string)` → Eliminar tarea completada.
-   - `getTarea()` → Listar tareas almacenadas.
-
-## Contrato desplegado
-
-- Dirección del contrato: `0x6edd2c66811e2994375230caefce6ec96dc62ad8`
-- Enlace al Block Explorer (Etherscan Sepolia): `*[a completar]*`  
-
-## Temas abordados
-
-Este proyecto práctico abarca:
-
-- Structs  
-- Asignación de datos  
-- Tipos de datos: Valor y Referencia  
-- Arrays  
-- Variables globales  
-- Estructuras de control y flujo  
-- Operadores de incremento y comparación  
-- Función Hash y Función ABI  
-- Buenas prácticas de desarrollo  
+Desarrollado por Matías Chacón – Desarrollador FullStack.  
+El repositorio es parte del proceso de formación en desarrollo blockchain.  
 
